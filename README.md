@@ -1,9 +1,7 @@
-# Text-Translator-using-Nodejs
-It is a text translate which translate any text of any language to any other language supported by google at free of cost 
+# Text Translator using Google Translation 
+It is a text translater which translate any text of any language to any other language supported by google at free of cost. Developed using Nodejs express, this app exposes a post REST API for translating the text. The format of data to be send via the API is defined below. You just have to call the API and API will give you the desired results. It will through error as well for any of the typo error or some logicals errors like you want to convert a text from english to japenese but the text has been given in marathi then it will through an error. All the error handling has been done at the application level. 
 
-# Project Title
-
-A nice project with a nice description
+This app is using MongoDB as it's caching database, so if you query for translation that was once asked by you before it will just use it's cache memory to answer your query thus reducing it's response time.
 
 ---
 ## Requirements
@@ -39,18 +37,18 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
     $ npm install npm -g
 
 ###
-### Yarn installation
-  After installing node, this project will need yarn too, so just run the following command.
-
-      $ npm install -g yarn
-
 ---
 
 ## Install
 
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
-    $ cd PROJECT_TITLE
-    $ yarn install
+Just clone the repository
+     git clone https://github.com/mostlypanda/Text-Translator-using-Nodejs.git
+    
+Now heading towards the code directory    
+     cd Text-Translator-using-Nodejs
+    
+Install all the dependencies    
+     npm install
 
 ## Configure app
 
@@ -62,7 +60,7 @@ Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
 
 ## Running the project
 
-    $ yarn start
+     npm start
 
 ## Simple build for production
 
