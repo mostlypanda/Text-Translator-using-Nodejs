@@ -99,5 +99,8 @@ where 'to' is the target language
       'text' is the data to be translated. 
 
 ```
+## Demonstration
+
+### For successful request
 ![](https://github.com/mostlypanda/Text-Translator-using-Nodejs/blob/main/Assets/API%20Working.png)
 
