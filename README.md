@@ -99,4 +99,5 @@ where 'to' is the target language
       'text' is the data to be translated. 
 
 ```
+![](https://github.com/mostlypanda/Text-Translator-using-Nodejs/tree/main/Assets)
 
