@@ -29,17 +29,17 @@ app.use(cors());
 mongoose.Promise = global.Promise;
 
 mongoose.connect(process.env.MONGO_URL, {
-        useNewUrlParser: true
-    }).then(() => {
+    useNewUrlParser: true
+}).then(() => {
 
-        console.log("Database is connected");
+    console.log("Database is connected");
 
-    }).catch((err) => {
+}).catch((err) => {
 
-        console.log(err);
-        process.exit();
+    console.log(err);
+    process.exit();
 
-    }) /
+}) /
 
 
     // Starting route
@@ -102,12 +102,19 @@ app.post('/api/translate', (req, res) => {
         if (!flag) {
 
             // Calling translation API
-            
+
             Translate(translate.text, {
                 to: translate.lang_to,
                 from: translate.lang_from
             }).then(
                 (data) => {
+                    // Let's check that given text follow the rule of it's given language grammar
+                    var check = data.from.language.iso;
+
+                    // If it don't follow then throw an error
+                    if (check !== translate.lang_from) {
+                        return res.status(400).json({ "msg": "The given text is not in the format of it's given language" });
+                    }
                     // Creating the cache object
                     const cached_obj = new Searchedtext({
                         text: translate.text,
