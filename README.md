@@ -41,27 +41,61 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
 ## Install
 
-Just clone the repository
+#### Just clone the repository
+
+```
      git clone https://github.com/mostlypanda/Text-Translator-using-Nodejs.git
+```
+
+#### Now heading towards the code directory    
     
-Now heading towards the code directory    
+```  
      cd Text-Translator-using-Nodejs
-    
-Install all the dependencies    
+```
+
+#### Install all the dependencies    
+
+```
      npm install
+```
 
 ## Configure app
 
-Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
-
-- A setting;
-- Another setting;
-- One more setting;
+- Now you have to create a file named as ```.env``` that contains the database link to connect to mongoose and just save it and you are good to go.
 
 ## Running the project
 
+```
      npm start
+```
 
-## Simple build for production
+---
 
-    $ yarn build
+## App Structure
+
+```
+/app.js - This is the main of the app having code of all the API's and app formation and listening and DB connection
+/Language DB/ languages.js - This file contains all the languages support by the app and their manipulations.
+/Models/ model.js - This contains the schema of cache object 
+
+```
+---
+
+## API Format
+
+```
+The REST API endpoint is '/api/translate/'
+
+And the format of data to be send via the API in the body of API
+
+{
+    "to" : "chinese simplified",
+    "from" : "English",
+    "text" : "That person is calling you"
+}
+
+where 'to' is the target language
+      'from' is language of given text
+      'text' is the data to be translated. 
+
+```
