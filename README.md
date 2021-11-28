@@ -44,19 +44,19 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 #### Just clone the repository
 
 ```
-     git clone https://github.com/mostlypanda/Text-Translator-using-Nodejs.git
+git clone https://github.com/mostlypanda/Text-Translator-using-Nodejs.git
 ```
 
 #### Now heading towards the code directory    
     
 ```  
-     cd Text-Translator-using-Nodejs
+cd Text-Translator-using-Nodejs
 ```
 
 #### Install all the dependencies    
 
 ```
-     npm install
+npm install
 ```
 
 ## Configure app
@@ -66,7 +66,7 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 ## Running the project
 
 ```
-     npm start
+npm start
 ```
 
 ---
