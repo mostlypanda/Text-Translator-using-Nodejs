@@ -77,7 +77,7 @@ npm start
 /app.js - This is the main of the app having code of all the API's and app formation and listening and DB connection
 /Language DB/ languages.js - This file contains all the languages support by the app and their manipulations.
 /Models/ model.js - This contains the schema of cache object 
-
+/Assets - Contains image assets for Readme
 ```
 ---
 
@@ -99,3 +99,4 @@ where 'to' is the target language
       'text' is the data to be translated. 
 
 ```
+
